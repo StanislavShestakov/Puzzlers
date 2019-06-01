@@ -1,4 +1,4 @@
-package BestExmaples.bubbleSort;
+package main.java.BestExmaples.bubbleSort;
 
 import java.util.Arrays;
 
@@ -21,7 +21,13 @@ public class SuperBubbleSort {
         }
         return arr;
     }
-    static <E extends Comparable<E>> E[] sort(Object object) {
+    static <E extends Comparable<E>> E[] sort(int[] ints) {
+        Integer[] wrappedInts = Arrays.stream(ints)
+                .boxed()
+                .toArray(Integer[]::new);
+       return  (E[]) sort(wrappedInts);
+    }
+    /*static <E extends Comparable<E>> E[] sort(Object object) {
         E[] temp = null;
         if (object instanceof int[]) {
             int[] arr = (int[]) object;
@@ -85,5 +91,5 @@ public class SuperBubbleSort {
                 throw new RuntimeException("not supported type of array!");
             }
         return temp;
-    }
+    }*/
 }
