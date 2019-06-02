@@ -7,7 +7,7 @@ import java.util.Arrays;
  */
 public class SuperBubbleSort {
     static <E extends Comparable<E>> E[] sort(E[] arr) {
-        int n = arr.length;
+        int n = arr.length;;
         E temp;
         for(int i=0; i < n; i++) {
             for (int j = 1; j < (n - i); j++) {
@@ -19,6 +19,7 @@ public class SuperBubbleSort {
 
             }
         }
+
         return arr;
     }
     static <E extends Comparable<E>> E[] sort(int[] ints) {
