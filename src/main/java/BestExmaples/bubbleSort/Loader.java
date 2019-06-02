@@ -7,6 +7,8 @@ import java.util.Arrays;
  */
 public class Loader {
     //this example shows, how to sort arrays of any types without utilites
+
+    //https://stackoverflow.com/questions/11451535/gitignore-is-ignored-by-git how to remove unnecessary files and dirs
     public static void main(String[] args) {
 
         System.out.println("\n Sort Integers ==========================\n");
@@ -21,6 +23,14 @@ public class Loader {
         int []  intPrimitives = {3,60,35,2,45,320,5};
         System.out.println(Arrays.toString(intPrimitives));
         System.out.println(Arrays.toString(SuperBubbleSort.sort(intPrimitives)));
+        System.out.println("\n Sort short ==========================\n");
+        short []  shortPrimitives = {3,60,35,2,45,320,5};
+        System.out.println(Arrays.toString(shortPrimitives));
+        System.out.println(Arrays.toString(SuperBubbleSort.sort(shortPrimitives)));
+        System.out.println("\n Sort short ==========================\n");
+        boolean []  bPrimitives = {true,false,true,true,true,false,true};
+        System.out.println(Arrays.toString(bPrimitives));
+        System.out.println(Arrays.toString(SuperBubbleSort.sort(bPrimitives)));
 
     }
 
