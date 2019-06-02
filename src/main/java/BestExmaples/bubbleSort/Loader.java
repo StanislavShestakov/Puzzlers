@@ -31,6 +31,13 @@ public class Loader {
         boolean []  bPrimitives = {true,false,true,true,true,false,true};
         System.out.println(Arrays.toString(bPrimitives));
         System.out.println(Arrays.toString(SuperBubbleSort.sort(bPrimitives)));
+        System.out.println("\n float short ==========================\n");
+        float []  floatsPrimitives = {3.0f,3.5f,3.7f,7.0f,99.0f,15.0f,16.0f,-9.0f,};
+        System.out.println(Arrays.toString(floatsPrimitives));
+        System.out.println(Arrays.toString(SuperBubbleSort.sort(floatsPrimitives)));
+        if(SuperBubbleSort.sort(floatsPrimitives)[0] instanceof Double){
+            System.out.println("Yay!");
+        }
 
     }
 

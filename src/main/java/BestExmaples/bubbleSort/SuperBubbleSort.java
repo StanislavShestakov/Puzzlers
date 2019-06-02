@@ -1,6 +1,9 @@
 package main.java.BestExmaples.bubbleSort;
 
 import java.util.Arrays;
+import java.util.stream.DoubleStream;
+import java.util.stream.IntStream;
+import java.util.stream.Stream;
 
 /**
  * Created by Stas on 30.05.2019.
@@ -51,13 +54,13 @@ public class SuperBubbleSort {
         }
         return (E[]) sort(wrapped);
     }
+
     static <E extends Comparable<E>> E[] sort(float[] array) {
-        Float[] wrapped = new Float[array.length];
-        for (int i = 0; i < array.length; i++) {
-            wrapped[i] = Float.valueOf(array[i]);
-        }
-        return (E[]) sort(wrapped);
+        DoubleStream ds = IntStream.range(0, array.length)
+                .mapToDouble(i -> array[i]);
+        return (E[]) sort(ds.toArray()); // returned double
     }
+
     static <E extends Comparable<E>> E[] sort(byte[] array) {
         Byte[] wrapped = new Byte[array.length];
         for (int i = 0; i < array.length; i++) {
@@ -65,6 +68,7 @@ public class SuperBubbleSort {
         }
         return (E[]) sort(wrapped);
     }
+
     static <E extends Comparable<E>> E[] sort(short[] array) {
         Short[] wrapped = new Short[array.length];
         for (int i = 0; i < array.length; i++) {
@@ -72,6 +76,7 @@ public class SuperBubbleSort {
         }
         return (E[]) sort(wrapped);
     }
+
     static <E extends Comparable<E>> E[] sort(boolean[] array) {
         Boolean[] wrapped = new Boolean[array.length];
         for (int i = 0; i < array.length; i++) {
