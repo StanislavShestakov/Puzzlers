@@ -27,7 +27,7 @@ public class Loader {
         short []  shortPrimitives = {3,60,35,2,45,320,5};
         System.out.println(Arrays.toString(shortPrimitives));
         System.out.println(Arrays.toString(SuperBubbleSort.sort(shortPrimitives)));
-        System.out.println("\n Sort short ==========================\n");
+        System.out.println("\n boolean short ==========================\n");
         boolean []  bPrimitives = {true,false,true,true,true,false,true};
         System.out.println(Arrays.toString(bPrimitives));
         System.out.println(Arrays.toString(SuperBubbleSort.sort(bPrimitives)));
