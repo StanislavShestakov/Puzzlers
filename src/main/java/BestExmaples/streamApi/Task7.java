@@ -37,7 +37,7 @@ public class Task7 {
 
         int count2 = 0;
         int sum = 0;
-        int min = list.get(0);
+        int min = list.get(0)+3;
         double average = 0.0;
         int max = 0;
         for (Integer i : list) {
