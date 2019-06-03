@@ -61,7 +61,7 @@ public class Task2 {
 
 enum Sex {MAN, WOMAN;}
 
-class People {
+class People implements Comparable<People> {
     String name;
     int age;
     Sex sex;
@@ -103,5 +103,10 @@ class People {
                 ", age=" + age +
                 ", sex=" + sex +
                 '}';
+    }
+
+    @Override
+    public int compareTo(People o) {
+        return this.name.compareTo(o.name);
     }
 }
