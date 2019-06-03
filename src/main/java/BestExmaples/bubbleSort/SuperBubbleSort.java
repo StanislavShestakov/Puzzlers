@@ -1,4 +1,5 @@
-package main.java.BestExmaples.bubbleSort;
+
+package BestExmaples.bubbleSort;
 
 import java.util.Arrays;
 

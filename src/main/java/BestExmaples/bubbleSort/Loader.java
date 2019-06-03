@@ -1,4 +1,4 @@
-package main.java.BestExmaples.bubbleSort;
+package BestExmaples.bubbleSort;
 
 import java.util.Arrays;
 
@@ -6,9 +6,15 @@ import java.util.Arrays;
  * Created by Stas on 29.05.2019.
  */
 public class Loader {
+
     //this example shows, how to sort arrays of any types without utilites
 
     //https://stackoverflow.com/questions/11451535/gitignore-is-ignored-by-git how to remove unnecessary files and dirs
+
+    /*
+    https://stackoverflow.com/questions/16494537/my-intellij-java-project-cant-find-misc-xml
+     istruction how to do not clear dir ".idea"  completely
+    * */
     public static void main(String[] args) {
 
         System.out.println("\n Sort Integers ==========================\n");
@@ -31,6 +37,7 @@ public class Loader {
         boolean []  bPrimitives = {true,false,true,true,true,false,true};
         System.out.println(Arrays.toString(bPrimitives));
         System.out.println(Arrays.toString(SuperBubbleSort.sort(bPrimitives)));
+
 
     }
 

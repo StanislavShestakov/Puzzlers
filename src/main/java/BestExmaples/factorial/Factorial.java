@@ -1,4 +1,4 @@
-package main.java.BestExmaples.factorial;
+package BestExmaples.factorial;
 
 public class Factorial {
     static int calculateFactorial(int n) {
