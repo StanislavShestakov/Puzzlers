@@ -48,5 +48,32 @@ public class Task8 {
             map.put(s.charAt(0)+"",  s.charAt(1)+"");
         }
         System.out.println(map);
+
+        System.out.println("=================================");
+        Map<String,List<String>> map1 = new HashMap<>();
+        for (String s:list) {
+            if(map1.containsKey(String.valueOf(s.charAt(0)))){
+                List<String> list4 = new ArrayList<>(map1.get(String.valueOf(s.charAt(0))));
+                list4.add(s);
+                map1.put(String.valueOf(s.charAt(0)), list4);
+            }else {
+                List<String> list3 = new ArrayList<>();
+                list3.add(s);
+                map1.put(String.valueOf(s.charAt(0)), list3);
+            }
+        }
+        System.out.println(map1);
+
+        System.out.println("=================================");
+        Map<String,String> map2 = new HashMap<>();
+        for (String s:list) {
+            if(map2.containsKey(String.valueOf(s.charAt(0)))){
+                String value = map2.get(String.valueOf(s.charAt(0)))+":"+s.charAt(1);
+                map2.put(String.valueOf(s.charAt(0)), value);
+            }else {
+                map2.put(String.valueOf(s.charAt(0)), String.valueOf(s.charAt(1)));
+            }
+        }
+        System.out.println(map2);
     }
 }
