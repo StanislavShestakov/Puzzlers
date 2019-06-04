@@ -4,6 +4,9 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+/**
+ * Created by Stas on 04.06.2019.
+ */
 public class Task3 {
 /*
 1. Найти существуют ли хоть один «a1» элемент в коллекции
@@ -15,42 +18,40 @@ public class Task3 {
         List<String> list = Arrays.asList("a1", "a2", "a3", "a1");
         System.out.println(list.toString());
 
-        String isa1 = "false";
-        for (String s: list) {
-            if(s.equals("a1")){
-                isa1 ="true";
+        boolean isA1 = false;
+        for (String s:list) {
+            if(s.equals("a1")) {
+                isA1 = true;
                 break;
             }
         }
-        System.out.println(isa1);
+        System.out.println(isA1);
 
-
-        String isa8 = "false";
-        for (String s: list) {
-            if(s.equals("a8")){
-                isa8 ="true";
+        boolean isA8 = false;
+        for (String s:list) {
+            if(s.equals("a8")) {
+                isA8 = true;
                 break;
             }
         }
-        System.out.println(isa8);
+        System.out.println(isA8);
 
-        String isa7 = "true";
-        for (String s: list) {
-            if(s.equals("a7")){
-                isa7 ="false";
-                break;
-            }
-        }
-        System.out.println(isa7);
-
-        String is1 = "true";
-        for (String s: list) {
-            if(!s.contains("1")){
-                is1 ="false";
+        boolean is1 = true;
+        for (String s:list) {
+            if(!s.contains("1")) {
+                isA8 = false;
                 break;
             }
         }
         System.out.println(is1);
 
+        boolean isA7 = true;
+        for (String s:list) {
+            if(s.equals("a7")) {
+                isA7 = false;
+                break;
+            }
+        }
+        System.out.println(isA7);
     }
 }
